@@ -8,7 +8,7 @@ let growl = new Audio('assets/growl.mp3');
 // Write password to the #password input
 function writePassword() {
   meow.play();
-  let lengthQ = prompt("How long would you like your password to be?");
+  let lengthQ = prompt("How long would you like your password to be (must be between 8-128)?");
  
   if (lengthQ < 8 || lengthQ > 128  ) {
     growl.play();
