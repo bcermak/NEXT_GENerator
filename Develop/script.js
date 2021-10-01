@@ -1,15 +1,17 @@
 // Assignment Code
 let generateBtn = document.querySelector("#generate");
 
-var audio = new Audio('assets/meow.mp3');
+let meow = new Audio('assets/meow.mp3');
+let growl = new Audio('assets/growl.mp3');
 
 
 // Write password to the #password input
 function writePassword() {
-  audio.play();
+  meow.play();
   let lengthQ = prompt("How long would you like your password to be?");
  
   if (lengthQ < 8 || lengthQ > 128  ) {
+    growl.play();
     alert("Not in required length range!");
   } else {
     let lowerQ = prompt("Would you like to use lowercase characters? (Y/N)");
